@@ -4,6 +4,11 @@
 
 Mahasiswa CRUD Spring adalah REST API backend untuk manajemen data mahasiswa yang dibangun menggunakan Spring Boot 3. Aplikasi ini dirancang dengan arsitektur berlapis (layered architecture) yang memisahkan tanggung jawab antara Controller, Service, Repository, dan Model. Setiap lapisan memiliki peran spesifik: Controller menangani permintaan HTTP dan mengembalikan respons JSON, Service mengelola logika bisnis dan transaksi database, Repository menyediakan akses data melalui Spring Data JPA, serta Model merepresentasikan tabel-tabel dalam database Oracle. Sistem autentikasi menggunakan JSON Web Token (JWT) yang memungkinkan akses stateless tanpa session server, di mana setiap permintaan diverifikasi melalui token yang disertakan dalam header Authorization. Password pengguna dienkripsi menggunakan algoritma BCrypt sebelum disimpan ke database, memastikan keamanan kredensial meskipun terjadi kebocoran data. Seluruh endpoint mahasiswa dilindungi oleh Spring Security, sementara endpoint registrasi dan login terbuka untuk publik. Aplikasi ini juga dilengkapi dengan validasi input di sisi server menggunakan Bean Validation (Jakarta Validation), global exception handler untuk respons error yang konsisten dan informatif, serta konfigurasi CORS yang memungkinkan integrasi dengan frontend yang berjalan di domain atau port berbeda.
 
+## Repositori Frontend (Vue.Js)
+https://github.com/BenedictoGeraldo/mahasiswa-crud-vue.git
+
+---
+
 ## Fitur
 
 - **Autentikasi JWT** — Registrasi akun baru, login untuk mendapatkan token, dan perlindungan endpoint dengan JWT
